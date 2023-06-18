@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>img 태그</title>
+</head>
+<body>
+	<!-- 내부 리소스 이미지 -->
+	<img width="500" src="images/경리3.jpg">							<!-- width만 적어도 height 자동 계산-->
+	<img height="1000" src="./images/민하1.jpg">						<!-- height만 적어도 width 자동 계산-->
+	<img src="../Web/images/민하2.jpg" alt="민하 2번째 이미지">			<!-- live server에서는 현재 프로젝트 상위 폴더 접근권한 없어서 이미지 깨짐 ==> 이때 깨진 이미지 설명=alt -->
+
+	<!-- 외부 리소스 이미지 -->
+	<!-- <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png"> -->
+
+	<a href="https://google.com" target="_blank">
+		<img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png">
+	</a>
+
+</body>
+</html>

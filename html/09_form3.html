@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Form 연습3</title>
+	</head>
+
+	<body>
+		<form action="">
+			<!-- 그룹 만들기 -->
+			<fieldset>
+				<legend>상품 선택 (그룹1)</legend>
+				<ul id="shopping">
+					<li>
+						<label>
+							<input type="checkbox" value="gift_3kg">선물용 3Kg
+						</label>
+						<input type="number">개
+					</li>
+					<li>
+						<label>
+							<input type="checkbox" value="gift_5kg" checked="true">선물용 5Kg
+						</label>
+						<input type="number">개
+					</li>
+					<li>
+						<label>
+							<input type="checkbox" value="home_3kg">가정용 3Kg
+						</label>
+						<input type="number">개
+					</li>
+					<li>
+						<label>
+							<input type="checkbox" value="home_5kg">가정용 5Kg
+						</label>
+						<input type="number">개
+					</li>
+				</ul>
+			</fieldset>
+
+			<p></p>
+
+			<!-- 그룹 만들기 -->
+			<fieldset>
+				<legend>포장 선택 (그룹2)</legend>
+				<ul id="shipping">
+					<li>
+						<input id="gift" type="radio" name="gift" value="yes">
+						<label for="gift">선물 포장</label>
+					</li>
+					<li>
+						<input id="nogift" type="radio" name="gift" value="no">
+						<label for="nogift">선물 포장 안함</label>
+					</li>
+				</ul>
+			</fieldset>
+		</form>
+	</body>
+</html>
