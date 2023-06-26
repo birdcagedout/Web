@@ -1,0 +1,16 @@
+/* 방법1. 직접 경로에 넣어준 fonts로 설정 */
+@font-face {
+  font-family: 'sucoding';
+	src: url('./assets/fonts/NanumGothic-Regular.woff2') format('woff2'), 								/* IE 빼고 거의 모든 브라우저 호환 */
+			 url('./assets/fonts/NanumGothic-Regular.woff') format('woff'),										/* IE11 포함한 모든 브라우저 호환 */
+			 url('./assets/fonts/NanumGothic-Regular.ttf') format('truetype');								/* 그래도 안 되면 fallback 폰트 사용 */
+}
+
+p {
+  font-family: 'sucoding';
+	font-size: 20px;
+}
+
+div {
+	font-size: 20px;
+}

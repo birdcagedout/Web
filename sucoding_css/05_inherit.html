@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>상속(inherit)</title>
+	<style>
+		/* 1) div태그에 지정한 속성이 자식인 p태그에도 적용되었다. */
+		div {
+			color: red;
+			/* 3) 모든 속성이 상속되는 것은 아니며, 상속되지 않은 속성도 있다.
+			div태그에 border 적용해도 p태그에 별도의 border가 적용되지는 않는다.(외울 필요는 없다.) */
+			border: 1px solid green;
+		}
+		/* 2) 만약 자식인 p태그에 별도로 스타일을 지정하면 부모속성을 override할 수 있다. */
+		p {
+			color: blue;
+		}
+
+	</style>
+</head>
+<body>
+	<div>
+		<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolores,</p>
+	</div>
+</body>
+</html>

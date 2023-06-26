@@ -1,0 +1,13 @@
+/* 웹폰트(구글폰트)를 html에 link 걸고 css에서 CSS규칙 붙여넣어 사용하기 */
+
+/* 주의: 여기다가 붙여넣는 게 아니고, style을 적용할 각각의 블럭 안에다 font-family 부분을 붙여넣는다!! */
+/* font-family: 'Nanum Gothic Coding', monospace; */
+
+p {
+  font-family: 'Nanum Gothic Coding', monospace;
+	font-size: 20px;
+}
+
+div {
+	font-size: 20px;
+}

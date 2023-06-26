@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>initial inherit unset revert</title>
+
+	<!-- 속성의 값에 넣을 수 있는 키워드: initial inherit unset revert -->
+	<!-- 1. initial: 자식 태그의 속성을 부모의 상속값을 적용하지 않고 default값으로 적용하고 싶을 때 -->
+	<!-- 3. unset: 상속될 수 있는 값이면 부모의 속성값, 상속될 수 없으면 initial값 -->
+	<!-- 4. revert: 상속될 수 있는 값이면 부모의 속성값, 상속될 수 없으면 default값(=user agent stylesheet) -->
+	<style>
+		/* 1) color 속성은 상속되므로 a, p태그에는 별도 스타일 없어도 red가 적용되어야 하지만 a태그에 적용 안 됨
+		개발자도구에서 확인해보면 a태그에는 user agent스타일이 정해져 있기 때문 ==> 상속받지 않음*/
+		div {
+			color: red;
+		}
+		/* 2) 만약 a태그 color속성에 inherit을 사용하면 부모인 div의 color속성은 상속가능하므로 상속값 적용됨 */
+		a {
+			color: inherit;
+		}
+		/* 3) p태그 color에 initial을 적용하면 default인 검은색으로 나온다. */
+		p {
+			color: initial;
+		}
+
+	</style>
+</head>
+
+<body>
+	<div>
+		<a href="#">link</a>
+		<p>text</p>
+	</div>
+
+</body>
+</html>

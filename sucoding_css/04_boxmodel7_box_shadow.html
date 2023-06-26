@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>박스모델7 bos-shadow</title>
+
+	<!-- box-shadow: [x-pos] [y-pos] [blur] [spread] [color] [inset] -->
+	<!-- 원래 개체의 모양 그대로 그림자도 생기기 때문에 타원 개체에는 타원 그림자가 생김 -->
+	<style>
+		div {
+			width: 100px;
+			height: 100px;
+			background: gray;
+			box-shadow: 10px 10px black;						/* x-pos가 +이면 오른쪽, y-pos가 +이면 아래쪽 */
+			box-shadow: 10px 10px 15px black;			/* 그림자에 흐림(blur) 효과 15px */
+			box-shadow: 10px 10px 15px 5px black;	/* 그림자가 더 많은 영역으로 퍼짐 */
+			box-shadow: 10px 10px 15px black inset;/* 그림자가 내부에 생김 */
+			border-radius: 50%;
+		}
+	</style>
+</head>
+<body>
+	<div></div>
+</body>
+</html>

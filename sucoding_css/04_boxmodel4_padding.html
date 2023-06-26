@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>박스모델4 padding</title>
+
+	<!-- padding: margin 속성 적용할 때와 똑같은 방식으로 적용 가능 -->
+	<style>
+		p {
+			border: 1px solid black;
+			padding: 10px;									/* 하나만 적으면 4방향 모두 같은 값 적용 */
+			padding: 10px 20px 30px 40px;		/* 4방향 모두 다른 값 적용 가능 */
+			padding: 50px 10px;							/* 2개 값만 적으면 위아래는 50px 좌우는 10px */
+		}
+	</style>
+</head>
+<body>
+	<h1>Padding</h1>
+	<p>
+		Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+		Perferendis culpa odit soluta quis, suscipit neque ipsam voluptatibus harum nesciunt minima
+		omnis recusandae magnam illo mollitia amet ratione obcaecati accusamus necessitatibus.
+	</p>
+</body>
+</html>

@@ -1,0 +1,11 @@
+/* 웹폰트(구글폰트)를 html에 link 걸고 css에서 import해서 사용하기 */
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap');
+
+p {
+  font-family: 'Nanum Pen Script', cursive;
+	font-size: 30px;
+}
+
+div {
+	font-size: 30px;
+}

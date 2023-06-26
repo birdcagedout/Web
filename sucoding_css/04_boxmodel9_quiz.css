@@ -1,0 +1,78 @@
+* {
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+
+/* 만든 표를 화면 중앙에 배치하기 위한 부분: 아직 안 배움 */
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	background-color: #66798f;
+}
+
+.price-ui {
+	width: 300px;
+	border: 1px solid #ccc;
+	border-radius: 10px;
+	box-shadow: 10px 10px 10px black;
+	background-color: white;
+	overflow: hidden;
+	/* 브라우저 상단에 딱붙어있는 부분에 border-radius가 적용되지 않을 때 사용
+		요소 바깥으로 내부 content가 넘쳐 표시되는 부분을 어떻게 처리할 것인가: hidden이면 숨긴다 */
+}
+
+.price-name-bg {
+	background-color: #2f2f2f;
+	padding: 20px 0px;
+}
+
+.price-name {
+	font-size: 28px;
+	line-height: 32px;
+	color: white;
+}
+
+.price-bg {
+	background-color: #66d2ac;
+	padding: 13px 0px;
+}
+
+.price {
+	font-size: 21px;
+	line-height: 28px;
+	color: white;
+}
+
+.item {
+	padding: 10px 0px;
+	font-size: 16px;
+	line-height: 16px;
+}
+
+.active {
+	background-color: #ffd15a;
+}
+
+li {
+	font-family: 'Malgun Gothic';
+	text-align: center;
+}
+
+
+.price-btn {
+	padding: 10px 17px;
+}
+
+button {
+	width: 100%;
+	padding: 10px 0px;
+	border: none;
+	color: white;
+	background-color: #00cb54;
+	font-size: 16px;
+	font-weight: bold;
+	line-height: 16px;
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>font 설정하기2-1 (웹폰트-link방법)</title>
+
+		<!--
+			<구글 웹폰트 적용하는 방법은 2가지>
+			방법1. link태그를 이용하는 방법
+
+			google font에서 폰트 선택 후 selected family 버튼(주사위모양) 누르면,
+			밑에 link 태그가 나오는 부분은 ==> html파일의 head부분에 붙여넣고,
+			CSS 규칙 나오는 부분은 ==> CSS파일의 적용할 블럭 내부에 font-family 적용한다.
+		-->
+
+		<!-- 이부분이 fonts.google.com에서 link부분 붙여넣은 것 -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding:wght@400;700&display=swap" rel="stylesheet">
+		<!-- CSS파일 설정 위에 붙여넣을 것 -->
+
+		<link rel="stylesheet" href="01_font2.css">
+</head>
+<body>
+	<!-- css에서 p블럭에만 sucoding 스타일(나눔고딕코딩)을 지정하였다. -->
+	<p>
+		무궁화 꽃이 피었습니다. <br>
+		Lorem ipsum dolor sit amet consectetur adipisicing elit. <br>
+		Quo ducimus aperiam veniam libero qui provident voluptatem necessitatibus tenetur fuga ab sint, <br>
+		consequatur nostrum commodi at amet corrupti, tempora laborum sapiente.
+	</p>
+
+	<!-- css에서 글자크기만 키워주었다. -->
+	<div>
+		무궁화 꽃이 피었습니다. <br>
+		Lorem ipsum dolor sit amet consectetur adipisicing elit. <br>
+		Quo ducimus aperiam veniam libero qui provident voluptatem necessitatibus tenetur fuga ab sint, <br>
+		consequatur nostrum commodi at amet corrupti, tempora laborum sapiente.
+	</div>
+</body>
+</html>

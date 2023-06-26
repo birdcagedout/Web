@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>박스모델6 border-radius</title>
+	<style>
+		/* div는 block 박스모델 */
+
+		#first {
+			width: 100px;
+			height: 200px;
+			border: 1px solid red;
+			border-radius: 50px;				/* width, height 중 더 작은 값의 절반이 border-radius px값의 최대값이며, 정확히 원형으로만 가능(w,h 달라도 타원 불가능) */
+		}
+
+		#second {
+			width: 100px;
+			height: 200px;
+			border: 1px solid blue;
+			border-radius: 50%;					/* border-radius를 px값으로 지정하는 것과 다르다. w값과 h값의 몇%길이를 곡률반지름의 중점으로 할 것인지 지정(50%이면 타원). w,h 다르면 기본적으로 타원형 */
+		}
+
+		#third {
+			width: 100px;
+			height: 200px;
+			border: 1px solid green;
+			border-radius: 30px 0px;		/* 좌상부터 30px, 우상=0, 우하=좌상, 좌하=우상 */
+			border-radius: 30px 0px 30px 0px;	/* 이렇게 써도 된다 */
+		}
+
+	</style>
+</head>
+<body>
+	<div id="first"></div>
+	<div id="second"></div>
+	<div id="third"></div>
+</body>
+</html>

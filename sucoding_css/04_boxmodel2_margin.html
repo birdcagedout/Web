@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>박스모델2 margin</title>
+	<style>
+
+		/* 해당 요소의 경계(border)로부터 바깥쪽 여백(~인접 요소의 margin영역까지의 여백)을 지정할 수 있다. */
+		/* 위/오른/아래/왼쪽 각각 지정 ==> margin-top, margin-right, margin-bottom, margin-left 속성을 이용한다. */
+		h1 {
+			margin-top: 100px;
+			margin-left: 50px;
+			margin-bottom: 30px;
+			margin: 100px;
+		}
+
+		/* margin 값을 한줄에 쓸 수도 있는데 ==> 이때는 **순서**에도 주의!, **값들 사이에 콤마 넣지 않는 것**에도 주의!!  */
+		/* 1) 4가지 값 넣기: 순서대로 margin: 위 오른 아래 왼쪽  <== 값들 사이에 콤마 넣으면 절대 안 됨!! */
+		/* 2) 3가지 값 넣기: 순서대로 margin: 위 오른 아래 + 값을 넣지 않은 왼쪽은 맞은편 오른쪽 margin과 동일한 값으로 지정 */
+		/* 3) 2가지 값 넣기: 순서대로 margin: 위 오른 + 값을 넣지 않은 아래는 위와 동일한 값, 왼쪽은 오른쪽 margin과 동일한 값으로 지정 */
+		/* 4) 1가지 값 넣기: 4방향 모두 한가지 값으로 지정 */
+		p {
+			margin: 10px 20px 30px 40px;
+			margin: 10px 20px 30px;				/* 왼쪽은 20px로 자동 설정 */
+			margin: 10px 20px;						/* 위,아래는 10px 오른,왼쪽은 20px */
+			margin: 50px;									/* 4방향 모두 margin=50px */
+		}
+	</style>
+</head>
+<body>
+	<h1>Margin</h1>
+	<p>
+		Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+		Perferendis culpa odit soluta quis, suscipit neque ipsam voluptatibus harum nesciunt minima
+		omnis recusandae magnam illo mollitia amet ratione obcaecati accusamus necessitatibus.
+	</p>
+</body>
+</html>

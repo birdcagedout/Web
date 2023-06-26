@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>박스모델8 박스 사이즈의 비밀</title>
+	<!-- 특정 요소의 사이즈 = border + padding + content (margin은 제외) -->
+	<style>
+		#first {
+			width: 100px;
+			height: 100px;
+			background-color: red;
+			/* w, h만 설정하고 개발자도구에서 확인하면 div요소의 size = 100 X 100 */
+
+			/* margin: 10px; */
+			/* margin 설정해도 여전히 100 X 100 */
+
+			border: 10px solid green;
+			/* 이제는 요소의 사이즈가 120 X 120 */
+
+			padding: 10px;
+			/* 이제는 요소의 사이즈가 140 X 140 */
+		}
+
+		#second {
+			width: 100px;
+			height: 100px;
+			background-color: orange;
+			/* 물론 지금까지 size = 100 X 100 */
+
+			/* 요소의 size 기준은 디폴트 값이 content-box이라서, width/height값은 content에 적용된다.
+			이것을 border-box로 변경하면 border + padding + content의 값에 width/height가 적용된다.
+			이렇게 하면 요소의 전체크기를 특정값으로 fix시킬 수 있기 때문에 ==> 실무에서는 무조건 border-box 사용 */
+			box-sizing: border-box;
+
+			border: 10px solid royalblue;
+			/* border를 적용하더라도 요소의 크기는 여전히 100 X 100 */
+
+			padding: 10px;
+			/* padding을 적용하더라도 요소의 크기는 여전히 100 X 100 */
+
+		}
+	</style>
+</head>
+<body>
+	<div id="first"></div>
+	<p></p>
+	<div id="second"></div>
+</body>
+</html>

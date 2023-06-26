@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>표에서 text-align(justify)을 이용한 균등배분</title>
+
+		<!-- https://www.codingfactory.net/12887 -->
+		<!-- 테이블의 헤더(th) 부분을 균들배분하기 위해 앞뒤로 줄바꿈을 추가하고, 행높이를 낮춤 -->
+		<style>
+			table {
+				border: 1px solid #cccccc;
+			}
+			th, td {
+				padding: 10px 20px;
+				border: 1px solid #cccccc;
+			}
+			th {
+				text-align: justify;
+			}
+			th:after {
+				content: "";
+				display: inline-block;
+				width: 100%;
+			}
+			th:before {
+				content: "";
+				display: inline-block;
+				width: 100%;
+			}
+			th {
+				text-align: justify;
+				line-height: 0;
+			}
+		</style>
+
+	</head>
+	<body>
+
+		<!-- 테이블의 헤더(th) 부분을 균들배분 -->
+		<table>
+			<tr>
+				<th>이 름</th>
+				<td>홍 길 동</td>
+			</tr>
+			<tr>
+				<th>이 메 일 주 소</th>
+				<td>gd@aaa.com</td>
+			</tr>
+			<tr>
+				<th>이 동 통 신</th>
+				<td>010-1111-1111</td>
+			</tr>
+		</table>
+	</body>
+</html>
