@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>initial값은 default값이 아니다</title>
+	<!-- 출처: https://stackoverflow.com/questions/18534561/what-is-use-of-initial-value-in-css -->
+	<!--
+		- initial(키워드): CSS Specification에 따라 각각의 CSS property에 정의된 값
+		- default(키워드 아님): 브라우저마다 각 element에 대하여 user-agent stylesheet에서 정의한 값
+
+		예를 들어 display 속성에는 여러가지 값이 올 수 있지만 initial값은 inline이다.
+		하지만, 크롬브라우저에서는 div태그의 CSS display 속성값을 block으로 user-agent stylesheet에 정해두었기 때문에
+		user-agent stylesheet값, 즉 default값은 block이 된다.
+		따라서, 만약 div요소의 display 속성에 initial값을 설정하게 되면, 해당 div요소의 display 속성이 inline이 된다.
+
+		일반적으로 initial을 쓰는 이유는 부모로부터 상속받지 않고 원래값으로 쓰고 싶을 때 사용한다.
+	-->
+</head>
+<style>
+	.init {
+		display: initial;
+	}
+
+	/* h3의 font-weight 속성의 initial은 normal임 (크롬에서 user-agent, 즉 default값은 bold임)
+	h3 {
+		font-weight: initial;
+	}
+	*/
+</style>
+
+<body>
+	<h1>h1</h1>
+	<h2>h2</h2>
+	<h3>h3</h3>
+	<h4>h4</h4>
+	<h5>h5</h5>
+	<h6>h6</h6>
+
+	<div>div태그입니다.</div>		<!-- display 속성값이 block이라서 한줄 모두 차지	 -->
+	<div class="init">div태그 init클래스 첫번째입니다.</div>		<!-- display 속성값이 inline이라서 content만큼만 차지	 -->
+	<div class="init">div태그 init클래스 두번째입니다.</div>		<!-- display 속성값이 inline이라서 content만큼만 차지	 -->
+
+</body>
+</html>
