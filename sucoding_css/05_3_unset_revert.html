@@ -7,27 +7,31 @@
 
 	<!-- 속성의 값에 넣을 수 있는 키워드: initial inherit unset revert -->
 	<!-- 3. unset: 상속될 수 있는 값이면 "부모"로부터 상속받고, 상속될 수 없으면 initial값 -->
-	<!-- 4. revert: 이전단계 origin으로 되돌림(Author만 있으면 user-agent값으로 되돌림, user-agent만 있으면 unset과 동일) -->
+	<!-- 4. revert: 이전단계 origin으로 되돌림(user-agent에 정의된 값이 있으면 그 값, user-agent에 지정된 값이 없으면 "부모"로부터 상속 값 -->
 	<style>
+
 		/* 1) color 속성은 상속되므로 a, p태그에는 별도 스타일 없어도 red가 적용되어야 하지만 a태그에 적용 안 됨
-		개발자도구에서 확인해보면 a태그에는 user agent스타일이 정해져 있기 때문 ==> 상속받지 않음*/
+		개발자도구에서 확인해보면 a태그에는 user-agent스타일이 정해져 있기 때문 ==> 상속받지 않음*/
 		div {
 			color: red;
 		}
 		/* 2) 만약 a태그 color속성에 inherit을 사용하면 부모인 div의 color속성은 상속가능하므로 red 적용됨 */
 		/*    만약 a태그 color속성에 unset을 사용하면, 부모인 div의 color속성은 상속가능하므로 red 적용됨 */
+		/* 		만약 a태그 color속성에 revert를 사용하면, user-agent에 정해진 값(blue)이 있으므로 blue 적용됨 */
 		a {
 			color: revert;
 		}
+
 		/* 3) p태그 color에 initial을 적용하면 black으로 나온다. */
 		p {
-			color: initial;
+			color: unset;
 		}
+
 		/* 4) h3태그 color에 revert를 적용하면 user-agent밖에 없기 때문에 unset과 동일한 효과 */
 		/* 5) h3태그 font-weight에 revert를 적용하면 user-agent밖에 없기 때문에 unset과 동일한데,
 		      font-weight는 상속받을 값이 없기 때문에, default값인 bold가 적용됨 */
 		h3 {
-			color: initial;
+			color: revert;
 			font-weight: revert;
 		}
 
