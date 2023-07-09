@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>background-color</title>
+	<style>
+		/* background-color가 적용되는 범위: boxmodel에서 margin, border영역에는 적용되지 않고, padding, content 영역에만 적용된다. */
+		/* 테스트1: div 내에 텍스트를 모두 지우면 배경색도 모두 사라진다. */
+		/* 테스트2: 이 상태에서 padding만 주면 배경이 생긴다. */
+		div {
+			background-color: green;
+			padding: 1em;
+			border: 10px solid black;
+		}
+	</style>
+</head>
+<body>
+	<div>
+		<!-- Lorem ipsum dolor sit amet consectetur adipisicing elit. -->
+	</div>
+</body>
+</html>
