@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+}
+
+.banner {
+    width: 100%;
+    height: 432px;
+
+    background: url('./images/banner.png') no-repeat center center;
+    background-size: cover;
+
+    padding-top: 127px;         /* 그림 최상단에서 Sucoding까지의 padding */
+    padding-bottom: 125px;      /* 그림 최하단에서 버튼까지의 padding */
+
+    text-align: center;
+    color: white;
+}
+
+.banner_title {
+    font-size: 32px;
+    padding-top: 38px;
+    margin-bottom: 25px;
+}
+
+.banner_text {
+    font-size: 24px;
+    margin-bottom: 32px;
+}
+
+/* 버튼에는 body의 font-family, font-weight 속성이 적용되지 않는다(Arial, 18, 400) */
+.banner_btn {
+    width: 165px;
+    height: 57px;
+    border: 1px solid white;
+    background-color: transparent;
+
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    color: white;
+    cursor: pointer;
+}
+
+.course {
+    text-align: center;
+    padding-top: 44px;
+}
+
+.course_text {
+    font-size: 25px;
+}

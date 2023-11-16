@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Love+Ya+Like+A+Sister&family=Pacifico&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* .wrap 클래스에 100%, 100% 주었을 때 y축으로 전체가 아닌 현상 발생!! 
+==> .wrap 클래스의 부모 태그(타입 셀렉터)에도 각각 100%, 100% 속성을 주어야 한다. 
+==> (주의) "html body .wrap" 처럼 하나의 셀렉터를 사용하면 안 된다!!
+==> 반드시 "html, body, .wrap"과 같이 각각에 적용될 수 있도록 셀렉터를 사용해야 한다!!
+*/
+html,
+body,
+.wrap {
+    width: 100%;
+    height: 100%;
+}
+
+.wrap {
+    background: url('./images/night.png') no-repeat center center;
+    background-size: cover;
+
+    padding-top: 380px;
+    padding-bottom: 379px;
+    
+    text-align: center
+}
+
+.wrap_name {
+    font-family: 'Pacifico', cursive;
+    font-size: 90px;
+    color: white;
+    line-height: 158px;
+    margin-bottom: 40px;
+}
+
+.wrap_job {
+    font-family: 'Love Ya Like A Sister', cursive;
+    font-size: 40px;
+    color: white;
+    line-height: 50px;
+    letter-spacing: -0.1rem;
+}
