@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		/* href 속성을 가지고 있는 모든 요소를 선택한다 */
+		[href] {
+			color: red;
+			background-color: yellow;
+		}
+		/* type 속성을 가지고 있는 모든 요소를 선택한다 */
+		[type] {
+			color: yellow;
+			background-color: purple;
+		}
+		/* 속성의 특정값을 가진 요소들만 선택할 수도 있다 */
+		[href="http://www.naver.com"] {
+			color: blue;
+		}
+		/* id, class도 속성의 일종이므로, id="" 또는 class=""로 속성선택자를 사용할 수 있다 */
+		[class="text"] {
+			color: green;
+		}
+		/* 태그와 속성을 모두(AND)가지고 있는 요소를 선택할 수도 있다 (실무에서도 많이 사용) */
+		a[href="http://www.daum.net"] {
+			font-size: 2rem;
+		}
+	</style>
+</head>
+<body>
+	<a href="http://www.naver.com">네이버 바로가기</a>
+	<a href="http://www.daum.net">다음 바로가기</a>
+	<input type="text">
+	<h1 id="title">제목</h1>
+	<p class="text">텍스트</p>
+</body>
+</html>
